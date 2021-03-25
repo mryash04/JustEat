@@ -1,0 +1,27 @@
+.head{
+    display:flex;
+    justify-content: space-between;
+    padding:10px;
+}
+
+.head_image{
+    height:40px;
+    margin-left:40px;
+    border-radius:5px;
+}
+
+.head_nav{
+    display: flex;
+    justify-content:space-evenly;
+    margin-right:25px;
+    z-index:2;
+}
+
+.head_link{
+    padding-left:10px;
+    padding-right:10px;
+    text-decoration:none;
+    color:#ffffff;
+    font-weight: bold;
+    font-size:20px;
+}
