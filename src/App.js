@@ -18,6 +18,12 @@ const App = () =>{
         <Route path="/signup">
           <h2>Sign up</h2>
         </Route>
+        <Route path="/ordernow">
+          <h2>Order Now</h2>
+        </Route>
+        <Route path="/moreblog">
+          <h2>More Blog</h2>
+        </Route>
         <Route path="/">
           <Header />
           <Home />

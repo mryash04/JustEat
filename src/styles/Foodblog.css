@@ -1,0 +1,36 @@
+.food_blog{
+    position:relative;
+    display:flex;
+    width:1130px;
+    /* height:260px; */
+    left:130px;
+    /* top:1267px; */
+    background-color:#ffffff;
+    box-shadow:inset 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.food_blog img{
+    height:120px;
+    width:150px;
+}
+
+.food_blogdata{
+    width:700px;
+}
+
+.food_blogdata h2{
+    position:relative;
+    left:20px;
+    bottom:15px;
+    font-weight:bold;
+    display:flex;
+    justify-content: flex-start;
+    align-items: center;
+    letter-spacing:0.04em;
+}
+
+.food_blogdata p{
+    position:relative;
+    left:20px;
+    bottom:20px;
+}

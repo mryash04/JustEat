@@ -21,7 +21,7 @@ const Head = () =>{
                     Recipe
                 </Link>
                 <Link to="/plans" className="head_link">
-                    My Food
+                    Cart
                 </Link>
                 <Link to="/signup" className="head_link">
                     Signup/Login

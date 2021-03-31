@@ -3,7 +3,7 @@ import TwitterIcon from '@material-ui/icons/Twitter';
 import InstagramIcon from '@material-ui/icons/Instagram';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import "../styles/Home.css";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Redirect } from 'react-router-dom';
 import HeaderBg from "../assets/header_bg.png";
 import Leaf from "../assets/leaf.png";
@@ -11,11 +11,17 @@ import Tomato from "../assets/tomato.png";
 import Chilli from "../assets/chilli.png";
 import NavigateNextIcon from '@material-ui/icons/NavigateNext';
 import SideBg from "../assets/sidebg.jpg";
+import MainMenu from "./MainMenu";
+import Menu1 from "../assets/MenuOne.jpeg";
+import Menu2 from "../assets/MenuTwo.jpeg";
+import Menu3 from "../assets/MenuThree.jpeg";
+import Menu4 from "../assets/MenuFourth.jpeg";
+import Blog from "./Blogs";
+import FoodGallery from "./FoodGallery";
 
 const Home = () => {
 
     const handleClick = () => {
-        <Redirect to="#ordernow" />
     }
 
     return (
@@ -34,7 +40,7 @@ const Home = () => {
                         </div>
                     </div>
                     <div className="home_button">
-                        <a href="#ordernow"><button onClick={handleClick}>Order Now</button></a>
+                        <Link to="/ordernow"><button onClick={handleClick}>Order Now</button></Link>
                         <span><NavigateNextIcon /></span>
                     </div>
                     <div className="home_left_image2">
@@ -52,6 +58,22 @@ const Home = () => {
                         right: "0", top: "0", height: "90%", zIndex: "1", filter: "brightness(74%)"
                     }} />
                 </div>
+            </div>
+            <div className="main_menu">
+                <MainMenu image={Menu1}
+                text="Order Food Online" />
+                <MainMenu image={Menu2}
+                text="Go out for a meal" />
+                <MainMenu image={Menu3}
+                text="Nightlife & Clubs" />
+                <MainMenu image={Menu4}
+                text="Just Eat It Pro" />
+            </div>
+            <div className="food_blogs">
+                <Blog />
+            </div>
+            <div className="food_gallery_items">
+                <FoodGallery />
             </div>
         </div>
     )
