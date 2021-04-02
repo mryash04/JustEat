@@ -68,6 +68,8 @@ const Home = () => {
                 text="Nightlife & Clubs" />
                 <MainMenu image={Menu4}
                 text="Just Eat It Pro" />
+                <MainMenu image={Menu4}
+                text="Just Eat It Pro" />
             </div>
             <div className="food_blogs">
                 <Blog />
