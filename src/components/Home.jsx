@@ -18,6 +18,8 @@ import Menu3 from "../assets/MenuThree.jpeg";
 import Menu4 from "../assets/MenuFourth.jpeg";
 import Blog from "./Blogs";
 import FoodGallery from "./FoodGallery";
+import Review from "../components/Review";
+import Footer from "../components/Footer";
 
 const Home = () => {
 
@@ -68,14 +70,18 @@ const Home = () => {
                 text="Nightlife & Clubs" />
                 <MainMenu image={Menu4}
                 text="Just Eat It Pro" />
-                <MainMenu image={Menu4}
-                text="Just Eat It Pro" />
             </div>
             <div className="food_blogs">
                 <Blog />
             </div>
             <div className="food_gallery_items">
                 <FoodGallery />
+            </div>
+            <div className="client_review_items">
+                <Review />
+            </div>
+            <div className="home_food">
+                <Footer />
             </div>
         </div>
     )
