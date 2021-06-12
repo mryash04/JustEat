@@ -2,6 +2,9 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import About from "./components/About";
+import Signup from "./components/Signup";
+import Login from "./components/Login";
 
 const App = () =>{
   return(
@@ -10,13 +13,14 @@ const App = () =>{
     <div className="App">
       <Switch>
         <Route path="/aboutus">
-          <h2>About us</h2>
+          <Header />
+          <About />
         </Route>
         <Route path="/plans">
           <h2>Plans</h2>
         </Route>
         <Route path="/signup">
-          <h2>Sign up</h2>
+          <Login />
         </Route>
         <Route path="/ordernow">
           <h2>Order Now</h2>
