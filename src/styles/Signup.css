@@ -1,0 +1,134 @@
+*{
+    box-sizing: border-box;
+}
+
+.signup_backimg{
+    background-image:url("../assets/login.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height:100vh;
+    /* width:100vh; */
+}
+
+.signup_main{           
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:100vh;
+    width:auto;
+
+}
+
+.welcome{
+    background-color: grey;
+    height: 60vh;
+}
+
+.abc{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    height: 30vh;
+}
+
+.welcome_back{
+    margin-left: 20%;
+}
+
+.info{
+    margin-left: 15%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome .welcome_btn{
+    border-radius: 50px;
+    background-color: #ff7f27;
+    margin-left:31.5%;
+    width: 30%;
+    height:2% ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    outline:none;
+    border:none;
+    color:black;
+    padding:15px 10px;
+    cursor:pointer;
+}
+
+.welcome_btn:hover{
+    background-color:blue;
+    color:black;
+}
+
+.account{
+    background-color:white;
+    height: 60vh;
+    width: 350px;
+}
+
+.create_account{
+    margin-left: 25%;
+}
+
+.signup_icon{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup_icons{
+    margin: 0px 10px;
+    font-size: 30px !important;
+    cursor: pointer;
+}
+
+.registration{
+    margin-left: 20%;
+}
+
+.signup_input{
+    display: flex;
+    margin-left: 18%;
+    flex-direction: column;
+
+}
+
+.signup_input input{
+    width:250px;
+    height:30px;
+    margin:5px 0px;
+    outline: none;
+    border:none;
+    font-size: 13px;
+    padding:5px;
+    border-radius: 2px;
+    box-shadow:inset 0px 4px 4px rgba(0,0,0,0.25);
+
+}
+
+.account .account_btn{
+    border-radius: 50px;
+    background-color: #ff7f27;
+    margin-left:31.5%;
+    width: 35%;
+    height:8% ;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    outline:none;
+    border:none;
+    color: black;
+    padding:15px 10px;
+    cursor:pointer;
+    margin-left: 35%;
+    margin-top: 5%;
+}
+
+.account .account_btn:hover{
+    background-color:blue;
+    color:black;
+}

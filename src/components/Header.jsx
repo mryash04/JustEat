@@ -26,6 +26,9 @@ const Head = () =>{
                 <Link to="/signup" className="head_link">
                     Signup/Login
                 </Link>
+                <Link to="/login" className="head_link">
+                    Signup/Login
+                </Link>
             </div>
         </div>
         </React.Fragment>
