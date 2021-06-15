@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+import "../styles/Login.css";
 import { useHistory } from "react-router-dom";
 import "../styles/Login.css";
 

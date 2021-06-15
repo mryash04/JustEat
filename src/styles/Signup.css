@@ -3,8 +3,8 @@
 }
 
 .signup_backimg{
-    background-image: url("../assets/pizza.jpg");
-    background-position:center;
+    background-image:url("../assets/login.jpg");
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     height:100vh;
@@ -125,6 +125,7 @@
     padding:15px 10px;
     cursor:pointer;
     margin-left: 35%;
+    margin-top: 5%;
     margin-top: 2%;
 }
 
