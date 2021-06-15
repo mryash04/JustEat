@@ -3,8 +3,13 @@
 }
 
 .signup_backimg{
+<<<<<<< HEAD
     background-image:url("../assets/login.jpg");
     background-position: center;
+=======
+    background-image: url("../assets/pizza.jpg");
+    background-position:center;
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
     background-size: cover;
     background-repeat: no-repeat;
     height:100vh;
@@ -125,7 +130,11 @@
     padding:15px 10px;
     cursor:pointer;
     margin-left: 35%;
+<<<<<<< HEAD
     margin-top: 5%;
+=======
+    margin-top: 2%;
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
 }
 
 .account .account_btn:hover{

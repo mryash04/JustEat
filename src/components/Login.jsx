@@ -2,8 +2,13 @@ import React, {useState} from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
+<<<<<<< HEAD
 import "../styles/Login.css";
 import { useHistory } from "react-router-dom";
+=======
+import { useHistory } from "react-router-dom";
+import "../styles/Login.css";
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
 
 function Login() {
   const history = useHistory();
@@ -22,6 +27,10 @@ function Login() {
 
   const handleSubmit = (event) =>{
       event.preventDefault();
+<<<<<<< HEAD
+=======
+      alert("Form Submitted");
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
   }
 
   return (

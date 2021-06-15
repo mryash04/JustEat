@@ -3,6 +3,7 @@ import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import "../styles/Signup.css";
+<<<<<<< HEAD
 import { GoogleLogin } from "react-google-login";
 
 const Signup = () => {
@@ -13,6 +14,10 @@ const Signup = () => {
     console.log(response);
   }
 
+=======
+
+const Signup = () => {
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
   return (
     <div className="signup_backimg">
       <div className="signup_main">
@@ -46,6 +51,7 @@ const Signup = () => {
           </div>
           <div className="signup_input">
             <input placeholder="Name" type="text"></input>
+<<<<<<< HEAD
             <input placeholder="Email" type="email"></input>
             <input placeholder="Password" type="password"></input>
           </div>
@@ -61,6 +67,16 @@ const Signup = () => {
             cookiePolicy={"single_host_origin"}
           />
           </div>
+=======
+            <input placeholder="Phone no." type="number"></input>
+            <input placeholder="Email" type="email"></input>
+            <input placeholder="Password" type="password"></input>
+            <input placeholder="Confirm Password" type="password"></input>
+          </div>
+          <button className="account_btn" type="submit">
+            Sign Up
+          </button>
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
         </div>
       </div>
     </div>

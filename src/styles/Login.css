@@ -3,7 +3,11 @@
 }
 
 .imgback{
+<<<<<<< HEAD
     background-image:url("../assets/login.jpg");
+=======
+    background-image:url("../assets/burger.webp");
+>>>>>>> e7d0e27e6aa6d1a5f10a50fda6c070a4eb9e6b07
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;

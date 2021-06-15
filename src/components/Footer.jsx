@@ -10,9 +10,9 @@ const Footer = () => {
         <div className="footer">
             <footer>
                 <div className="footer_icon">
-                    <FacebookIcon className="icons"/>
-                    <InstagramIcon className="icons"/>
-                    <TwitterIcon className="icons"/>
+                    <FacebookIcon />
+                    <InstagramIcon />
+                    <TwitterIcon />
                 </div>
                 <div className="footer_link">
                     <a href="#" className="link">Home</a>
