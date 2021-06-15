@@ -24,7 +24,10 @@ const Head = () =>{
                     Cart
                 </Link>
                 <Link to="/signup" className="head_link">
-                    Signup/Login
+                    Signup
+                </Link>
+                <Link to="/login" className="head_link">
+                    Login
                 </Link>
             </div>
         </div>

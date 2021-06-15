@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
@@ -9,20 +9,33 @@ function Login() {
   const history = useHistory();
   console.log(history);
 
-  const[input, setInput] = useState({
-      username:"",
-      password:""
-  });
+  const[username, setUsername] = useState("");
+  const[password, setPassword] = useState("");
+  const[allEntry, setAllEntry] = useState([]);
 
-  console.log(input);
+  console.log(username);
+  console.log(password);
+
+  useEffect(() => {
+    console.log("This is all Entry", allEntry);
+  }, [allEntry]);
 
   const handleChange = (event) =>{
-      setInput(event.target.value);
+    setUsername(event.target.value);
   };
 
+  const handleChangePassword = (event) =>{
+    setPassword(event.target.value)
+  }
+
   const handleSubmit = (event) =>{
-      event.preventDefault();
+    event.preventDefault();
       alert("Form Submitted");
+      const newEntry = {username: username, password: password};
+      console.log(newEntry);
+      setAllEntry([...allEntry, newEntry]);
+      setUsername("");
+      setPassword("");
   }
 
   return (
@@ -38,8 +51,8 @@ function Login() {
           <br />
           <form>
             <div className="signin_input">
-              <input placeholder="username" id="signin" onChange={handleChange} type="text" value={input.username} name="username"></input>
-              <input placeholder="password" id="signin" onChange={handleChange} type="password" value={input.password}></input>
+              <input placeholder="username" id="signin" onChange={handleChange} type="text" value={username} name="username"></input>
+              <input placeholder="password" id="signino" onChange={handleChangePassword} type="password" value={password}></input>
             </div>
           </form>
           <p>forgot Password?</p>

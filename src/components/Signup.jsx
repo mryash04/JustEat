@@ -1,10 +1,39 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import FacebookIcon from "@material-ui/icons/Facebook";
 import InstagramIcon from "@material-ui/icons/Instagram";
 import TwitterIcon from "@material-ui/icons/Twitter";
 import "../styles/Signup.css";
 
 const Signup = () => {
+
+  const[userDetails, setUserDetails] = useState({
+    username:"",
+    phoneno:"",
+    email:"",
+    password:"",
+    cpassword:""
+  });
+
+  const[allEntry, setAllEntry] = useState([]);
+  console.log(allEntry);
+
+  const{username, phoneno, email, password, cpassword} = userDetails;
+
+  console.log(userDetails);
+
+  const handleChange = (event) =>{
+    console.log(event.target.name);
+    setUserDetails({...userDetails, [event.target.name]:event.value})
+  }
+
+  const handleSubmit = (event) =>{
+    event.preventDefault();
+    const newEntry = {username, phoneno, email, password, cpassword};
+    setAllEntry([...allEntry, newEntry]);
+    console.log(allEntry);
+    setUserDetails({username:"", phoneno:"", email:"", password:"", cpassword:""})
+  }
+
   return (
     <div className="signup_backimg">
       <div className="signup_main">
@@ -37,13 +66,13 @@ const Signup = () => {
             <p>Or use your email for registration</p>
           </div>
           <div className="signup_input">
-            <input placeholder="Name" type="text"></input>
-            <input placeholder="Phone no." type="number"></input>
-            <input placeholder="Email" type="email"></input>
-            <input placeholder="Password" type="password"></input>
-            <input placeholder="Confirm Password" type="password"></input>
+            <input placeholder="Name" name="username" onChange={handleChange} value={username} type="text"></input>
+            <input placeholder="Phone no." name="phoneno" onChange={handleChange} value={phoneno} type="number"></input>
+            <input placeholder="Email" name="email" onChange={handleChange} value={email} type="email"></input>
+            <input placeholder="Password" name="password" onChange={handleChange} value={password} type="password"></input>
+            <input placeholder="Confirm Password" name="cpassword" onChange={handleChange} value={cpassword} type="password"></input>
           </div>
-          <button className="account_btn" type="submit">
+          <button className="account_btn" type="submit" onClick={handleSubmit}>
             Sign Up
           </button>
         </div>
