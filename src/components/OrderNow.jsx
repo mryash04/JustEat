@@ -41,11 +41,11 @@ const OrderNow = () => {
                     </div>
                     <div className="veg-burger-text">
                         <h3>Veg Burger</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
                         <h4>$40</h4>
                     </div>
                     <div className="veg-burger-cart">
@@ -61,11 +61,11 @@ const OrderNow = () => {
                     </div>
                     <div className="veg-burger-text">
                         <h3>Masala Dosa</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
                         <h4>$40</h4>
                     </div>
                     <div className="veg-burger-cart">
@@ -81,11 +81,11 @@ const OrderNow = () => {
                     </div>
                     <div className="veg-burger-text">
                         <h3>Veg Momo</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
                         <h4>$40</h4>
                     </div>
                     <div className="veg-burger-cart">
@@ -101,11 +101,11 @@ const OrderNow = () => {
                     </div>
                     <div className="veg-burger-text">
                         <h3>Pizza</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
                         <h4>$40</h4>
                     </div>
                     <div className="veg-burger-cart">
@@ -121,11 +121,11 @@ const OrderNow = () => {
                     </div>
                     <div className="veg-burger-text">
                         <h3>Pav Bhaji</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
+                        <StarSharpIcon/>
                         <h4>$40</h4>
                     </div>
                     <div className="veg-burger-cart">
