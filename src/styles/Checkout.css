@@ -1,0 +1,104 @@
+.checkout{
+    background-color: #eaeded;
+    padding:1rem;
+}
+
+.checkout-product{
+    background-color: #ffffff;
+}
+
+.checkout p{
+    font-size:15px;
+    width:600px;
+    margin:0;
+}
+
+.checkout span{
+    color:#b22222;
+    font-weight:bold;
+}
+
+.checkout-product{
+    border:1px solid #ffffff;
+    border-radius:5px;
+}
+
+.checkout-product-details{
+    display: flex;
+    /* justify-content: space-between; */
+}
+
+.checkout-product-details img{
+    width:300px;
+    height:200px;
+    border-radius: 10px;
+}
+
+.checkout-product-details-data h2{
+    margin-left: 5rem;
+    color:#b22222;
+}
+
+.checkout-product-details-data p{
+    margin-left: 5rem;
+}
+
+.checkout-product-details span{
+    margin-left: 18rem;
+    margin-top: 1.8rem;
+}
+
+.delete-btn{
+    display:flex;
+    justify-content:flex-end;
+    padding-right:10px;
+}
+
+.delete-btn button{
+    padding:10px 20px;
+    text-align:center;
+    background-color:rgb(192, 57, 43);
+    border:none;
+    outline:none;
+    color:#ffffff;
+    font-size:15px;
+    border-radius:5px;
+}
+
+.delete-btn button span{
+    color:#ffffff;
+    text-align:center;
+}
+
+.subtotal-details{
+    margin-top:1rem;
+    display:flex;
+    justify-content: space-between;
+}
+
+.subtotal-btn{
+    display:flex;
+    flex-direction:column;
+}
+
+.subtotal-btn button{
+    padding:15px 60px;
+    width:200px;
+    font-size:20px;
+    color:#ffffff;
+    background-color: #60b246;
+    border:none;
+    outline:none;
+    cursor: pointer;
+    border-radius:5px;
+}
+
+.subtotal-btn button:hover{
+    background-color:#ff7f26;
+}
+
+.subtotal-btn span{
+    padding-top:5px;
+    word-spacing:2px;
+    letter-spacing: 2px;
+}

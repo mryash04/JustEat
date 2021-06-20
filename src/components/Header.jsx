@@ -1,9 +1,24 @@
-import React from "react";
+import React, {useContext} from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import Logo from "../assets/justeat.jpeg";
+import { CartItems } from "./OrderNow";
+import {useSelector} from "react-redux";
 
 const Head = () =>{
+
+    const cart = useSelector(data => {
+        return data.cartData;
+    });
+
+    console.log(cart);
+
+    const cartItems = cart.length;
+    console.log(cartItems);
+
+    // const cartItem = useContext(CartItems);
+    // console.log("This is header cart item", cartItem);
+
     return(
         <React.Fragment>
         <div className="head">
@@ -21,7 +36,8 @@ const Head = () =>{
                     Recipe
                 </Link>
                 <Link to="/plans" className="head_link">
-                    Cart
+                    Cart 
+                    {cartItems == 0 ? "" : <span> {cartItems} </span>}
                 </Link>
                 <Link to="/signup" className="head_link">
                     Signup

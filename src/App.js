@@ -6,19 +6,35 @@ import Login from "./components/Login";
 import Signup from "./components/Signup";
 import OrderNow from "./components/OrderNow";
 import About from "./components/About";
+import {Provider} from "react-redux";
+import store from "./redux/store";
+import {addToCart, deleteFromCart} from "./redux/cart/cartAction";
+import OrderNowItems from "./components/orderNowItems";
+import CheckOut from "./components/CheckOut";
+
+console.log(store);
+
+const storeItem = store.subscribe(() => console.log(store.getState()));
+
+console.log(storeItem);
+
+console.log(addToCart);
+
+console.log(deleteFromCart);
 
 const App = () =>{
   return(
     <>
     <Router>
-    <div className="App">
+      <Provider store={store}>
+      <div className="App">
       <Switch>
         <Route path="/aboutus">
           <Header />
           <About />
         </Route>
         <Route path="/plans">
-          <h2>Plans</h2>
+          <CheckOut />
         </Route>
         <Route path="/signup">
           <Signup />
@@ -27,7 +43,8 @@ const App = () =>{
           <Login />
         </Route>
         <Route path="/ordernow">
-          <OrderNow/>
+          <Header />
+          <OrderNow />
           {/* <h2>Order Now</h2> */}
         </Route>
         <Route path="/moreblog">
@@ -39,6 +56,7 @@ const App = () =>{
         </Route>
       </Switch>
     </div>
+      </Provider>
     </Router>
     </>
   )

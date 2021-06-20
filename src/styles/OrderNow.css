@@ -9,17 +9,14 @@
 }
 .order-now-button{
     background-color: grey;
-    /* border: 1px solid; */
     height: 80px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
 .order-now-all-button{
-    /* margin-left: 70px;
-    margin-right:50px ;
-    margin-top: 15px; */
-    margin: 15px 50px 0px 70px;
     width: 150px;
     height: 50px;
-    /* margin: 30px; */
     border-radius: 40px;
     border: none;
     font-weight: bold;
@@ -34,9 +31,6 @@
 
 .veg-burger{
     display: flex;
-    /* margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px; */
     margin:5px 100px 0px 100px;
     border-top: 1px solid;
     border-radius: 10px;

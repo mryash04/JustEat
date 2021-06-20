@@ -1,19 +1,16 @@
-import React from 'react';
+import React, {createContext} from 'react';
 import "../styles/OrderNow.css";
-import Vegburger from "../assets/burger.webp";
-import Vegmomos from "../assets/Veg Momos.jpg";
-import pizza from "../assets/pizza.jpg";
-import PavBhaji from "../assets/pavbhaji.jpg";
-import dosaOne from "../assets/dosaOne.jpg";
-import StarSharpIcon from '@material-ui/icons/StarSharp';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import OrderNowItems from "./orderNowItems";
+import OrderNowItemsData from "./OrderNowItemsData";
 
-
+export const CartItems = createContext();
 
 const OrderNow = () => {
+
     return (
         <div>
+            <CartItems.Provider value={5}>
             <div className="order-now-back">
 
             </div>
@@ -35,106 +32,7 @@ const OrderNow = () => {
                 </button>
             </div>
             <div className="bg-white">
-                <div className="veg-burger">
-                    <div className="veg-burger-img">
-                        <img src={Vegburger} alt="vegburger" style={{ height: "170px",width:"250px",borderRadius:"10px" }} />
-                    </div>
-                    <div className="veg-burger-text">
-                        <h3>Veg Burger</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        <h4>$40</h4>
-                    </div>
-                    <div className="veg-burger-cart">
-                    <button className="veg-burger-cart-button" type="submit">
-                    ADD
-                    < ShoppingCartIcon className="Add-icon"/>
-                    </button>
-                    </div>
-                </div>
-                <div className="veg-burger">
-                    <div className="veg-burger-img">
-                        <img src={dosaOne} alt="vegburger" style={{ height: "170px",width:"250px",borderRadius:"10px" }} />
-                    </div>
-                    <div className="veg-burger-text">
-                        <h3>Masala Dosa</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        <h4>$40</h4>
-                    </div>
-                    <div className="veg-burger-cart">
-                    <button className="veg-burger-cart-button" type="submit">
-                    ADD
-                    < ShoppingCartIcon className="Add-icon"/>
-                    </button>
-                    </div>
-                </div>
-                <div className="veg-burger">
-                    <div className="veg-burger-img">
-                        <img src={Vegmomos} alt="vegburger" style={{ height: "170px",width:"250px",borderRadius:"10px" }} />
-                    </div>
-                    <div className="veg-burger-text">
-                        <h3>Veg Momo</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        <h4>$40</h4>
-                    </div>
-                    <div className="veg-burger-cart">
-                    <button className="veg-burger-cart-button" type="submit">
-                    ADD
-                    < ShoppingCartIcon className="Add-icon"/>
-                    </button>
-                    </div>
-                </div>
-                <div className="veg-burger">
-                    <div className="veg-burger-img">
-                        <img src={ pizza} alt="vegburger" style={{ height: "170px",width:"250px",borderRadius:"10px" }} />
-                    </div>
-                    <div className="veg-burger-text">
-                        <h3>Pizza</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        <h4>$40</h4>
-                    </div>
-                    <div className="veg-burger-cart">
-                    <button className="veg-burger-cart-button" type="submit">
-                    ADD
-                    < ShoppingCartIcon className="Add-icon"/>
-                    </button>
-                    </div>
-                </div>
-                <div className="veg-burger">
-                    <div className="veg-burger-img">
-                        <img src={PavBhaji} alt="vegburger" style={{ height: "170px",width:"250px",borderRadius:"10px" }} />
-                    </div>
-                    <div className="veg-burger-text">
-                        <h3>Pav Bhaji</h3>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        < StarSharpIcon/>
-                        <h4>$40</h4>
-                    </div>
-                    <div className="veg-burger-cart">
-                    <button className="veg-burger-cart-button" type="submit">
-                    ADD
-                    < ShoppingCartIcon className="Add-icon"/>
-                    </button>
-                    </div>
-                </div>
+                <OrderNowItemsData />
                 <button style={{
                     backgroundColor:"#000000",
                     borderRadius:"50px",
@@ -155,6 +53,7 @@ const OrderNow = () => {
                     verticalAlign:"middle"
                 }}><ArrowDropDownIcon/></span></button>
             </div>
+            </CartItems.Provider>
         </div>
 
     )
