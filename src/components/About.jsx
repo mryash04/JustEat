@@ -1,59 +1,81 @@
 import React from "react";
-import chefOne from "../assets/chef1.jpg";
+import "../styles/About.css";
+// import AboutImage from "../assets/about.jpg";
+import Enjoy from "../assets/enjoy.svg";
+import Lean from "../assets/lean.svg";
+import Order from "../assets/order.svg";
+import AboutMap from "../assets/aboutmap.jpg";
 
 const About = () => {
   return (
-    <div className="about" style={{ width: "90%", margin: "auto" }}>
-      <p
-        style={{
-          fontSize: "20px",
-          fontWeight: "500",
-          wordSpacing: "2px",
-          letterSpacing: "2px",
-        }}
-      >
-        Welcome to just eat, your number one source for all things [product].
-        We're dedicated to giving you the very best of [product], with a focus
-        on [store characteristic 1], [store characteristic 2], [store
-        characteristic 3]. Founded in [year] by [founder name], just eat has
-        come a long way from its beginnings in [starting location]. When
-        [founder name] first started out, [his/her/their] passion for [brand
-        message - e.g. "eco-friendly cleaning products"] drove them to [action:
-        quit day job, do tons of research, etc.] so that just eat can offer you
-        [competitive differentiator - e.g. "the world's most advanced
-        toothbrush"]. We now serve customers all over [place - town, country,
-        the world], and are thrilled that we're able to turn our passion 90%
-        [my/our] own website. [I/we] hope you enjoy [my/our] products as much as
-        [I/we] enjoy offering them to you. If you have any questions or
-        comments, please don't hesitate to contact [me/us].
-      </p>
-      <div
-        className="about_testimonials"
-        style={{display:"grid", gridTemplateColumns:"repeat(2, 1fr)"}}
-      >
-        <img
-          src={chefOne}
-          alt="testimonials"
-          style={{ height: "250px", width: "300px"}}
-        />
-        <div className="about_testimonials_info">
-          <p style={{fontWeight:"500"}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-            accusantium dolores voluptate sequi obcaecati, reprehenderit
-            blanditiis quas odit a voluptatibus. Consectetur tenetur soluta sunt
-            quis, ex esse porro? Expedita eum saepe, cumque est maxime
-            cupiditate molestias hic et tenetur adipisci, dolore rem sit quod
-            voluptatibus vel alias rerum quisquam sequi! Lorem ipsum dolor sit
-            amet consectetur adipisicing elit. Sit quam soluta cumque
-            voluptatibus modi? Rem nisi, velit ut laboriosam a consectetur
-            molestiae at ratione ex corporis consequuntur dolorem, amet sit.
-            Nostrum obcaecati distinctio aperiam numquam adipisci illo saepe
-            accusamus. Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-            Unde dolore, aliquam magnam nam quod ea nulla quam delectus
-            corporis. Eos voluptate, illum est accusamus accusantium corporis
-            at! Corporis, obcaecati reiciendis!
-          </p>
+    <div className="about-back">
+      <div className="about-img"></div>
+
+      <div className="about-description">
+        <p>
+          For us, it's not just about bringing you good food from your favourite
+          restaurants. It's about making a connection, which is why we sit down
+          with the chefs, dreaming up menus that will arrive fresh and full of
+          flavour. Try us!
+        </p>
+      </div>
+
+      <div className="about-works">
+        <h2>HOW IT WORKS</h2>
+        <div className="works-img">
+          <img
+            src={Order}
+            alt="order"
+            style={{ height: "200px", width: "250px" }}
+          />
+          <img
+            src={Lean}
+            alt="lean"
+            style={{ height: "200px", width: "250px" }}
+          />
+          <img
+            src={Enjoy}
+            alt="enjoy"
+            style={{ height: "200px", width: "250px" }}
+          />
         </div>
+        <div className="works-img-data">
+          <p>ORDER</p>
+          <p>RELAX</p>
+          <p>ENJOY</p>
+        </div>
+        <h4>Sit back and relax as the restaurent prepare your order.</h4>
+      </div>
+
+      <div className="about-mission">
+        <h3>OUR MISSION</h3>
+        <p>"Bringing good food into your everyday. That's our mission.</p>
+        <p>
+          That means we don't just deliver--we bring it, always going the extra
+          mile to make your experience memorable.
+        </p>
+        <p>
+          And it means this is delicious food you can enjoy everyday: from
+          vibrant salads for healthy office lunches, to indulgent family-sized
+          pizzas, to fresh sushi for a romantic night in. Whatever you crave, we
+          can help."
+        </p>
+      </div>
+
+      <div className="about-map">
+        <h2 >&nbsp; &nbsp;WHERE WE ARE</h2>
+        <img src={AboutMap} alt="about-map" style={{marginLeft:"25rem", width:"600px"}}/>
+      </div>
+      <div className="about-map-data">
+        <div className="country">
+        <h4>RESTAURENTS</h4>
+        <span>200+</span>
+        </div>
+        <div className="bike">
+        <h4>BIKES</h4>
+        <span>1000+</span>
+        </div>
+        <div className="city"><h4>CITIES</h4><span>18+</span></div>
       </div>
     </div>
   );
