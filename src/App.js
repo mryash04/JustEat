@@ -11,6 +11,9 @@ import store from "./redux/store";
 import {addToCart, deleteFromCart} from "./redux/cart/cartAction";
 import OrderNowItems from "./components/orderNowItems";
 import CheckOut from "./components/CheckOut";
+import Payment from "./components/Payment";
+import Footer from "./components/Footer";
+import Email from "./components/Email";
 
 console.log(store);
 
@@ -32,6 +35,7 @@ const App = () =>{
         <Route path="/aboutus">
           <Header />
           <About />
+          <Footer />
         </Route>
         <Route path="/plans">
           <CheckOut />
@@ -45,10 +49,15 @@ const App = () =>{
         <Route path="/ordernow">
           <Header />
           <OrderNow />
+          <Footer />
           {/* <h2>Order Now</h2> */}
         </Route>
         <Route path="/moreblog">
           <h2>More Blog</h2>
+        </Route>
+        <Route path="/pay">
+          <Payment />
+          {/* <Email /> */}
         </Route>
         <Route path="/">
           <Header />

@@ -10,11 +10,11 @@ function Login() {
   const history = useHistory();
   console.log(history);
 
-  const[username, setUsername] = useState("");
+  const[email, setEmail] = useState("");
   const[password, setPassword] = useState("");
   const[allEntry, setAllEntry] = useState([]);
 
-  console.log(username);
+  console.log(email);
   console.log(password);
 
   useEffect(() => {
@@ -22,21 +22,44 @@ function Login() {
   }, [allEntry]);
 
   const handleChange = (event) =>{
-    setUsername(event.target.value);
+    setEmail(event.target.value);
   };
 
   const handleChangePassword = (event) =>{
     setPassword(event.target.value)
   }
 
-  const handleSubmit = (event) =>{
+  const handleSubmit = async (event) =>{
     event.preventDefault();
       alert("Form Submitted");
-      const newEntry = {username: username, password: password};
+      const newEntry = {email: email, password: password};
       console.log(newEntry);
       setAllEntry([...allEntry, newEntry]);
-      setUsername("");
+      setEmail("");
       setPassword("");
+
+      const res = await fetch("/login", {
+        method : "POST",
+        headers : {
+          "Content-type" : "application/json",
+          'Accept': 'application/json'
+        },
+        body : JSON.stringify({
+          email, password
+        })
+      });
+
+      console.log(res);
+
+      const data = await res.json();
+      console.log(data);
+
+      if(data.status === "Success"){
+        alert("Login successfully 1234");
+        history.push("/")
+      }else{
+        alert("Login failed");
+      }
   }
 
   return (
@@ -52,10 +75,9 @@ function Login() {
           <br />
           <form>
             <div className="signin_input">
-              <input placeholder="username" id="signin" onChange={handleChange} type="text" value={username} name="username"></input>
+              <input placeholder="email" id="signin" onChange={handleChange} type="email" value={email} name="username"></input>
               <input placeholder="password" id="signino" onChange={handleChangePassword} type="password" value={password}></input>
             </div>
-          </form>
           <p>forgot Password?</p>
           <button
             type="submit"
@@ -64,6 +86,7 @@ function Login() {
           >
             Sign in
           </button>
+          </form>
         </div>
 
         <div className="hello">

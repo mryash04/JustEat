@@ -53,6 +53,7 @@
     padding-bottom: 5px;
     font-weight: bold;
     box-shadow: 1px 0 10px rgba(0, 0, 0, 0.8);
+    cursor:pointer;
 }
 
 .Add-icon{

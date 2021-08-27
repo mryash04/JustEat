@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import "../styles/Checkout.css";
 import Star from "../assets/star.jpg";
 import DeleteIcon from '@material-ui/icons/Delete';
+import {Link} from "react-router-dom";
 import { addToCart, deleteFromCart } from "../redux/cart/cartAction";
 
 const CheckOut = () => {
@@ -17,6 +18,8 @@ const CheckOut = () => {
   const deleteId = cartProduct.map((value) => value.id);
   console.log(deleteId);
 
+  const id = deleteId.map(value => console.log(value))
+
   const deleteItems = deleteId.filter(deleteItem => deleteItem);
   console.log(deleteItems);
 
@@ -28,7 +31,7 @@ const CheckOut = () => {
 
   const deleteItem = () =>{
     console.warn(deleteItems);
-    dispatch(deleteFromCart(deleteId))
+    dispatch(deleteFromCart(deleteId));
   }
 
   return (
@@ -68,7 +71,7 @@ const CheckOut = () => {
               </div>
             </div>
             <div className="delete-btn">
-              <button onClick={deleteItem}>Delete &nbsp;<span><DeleteIcon style={{fontSize : "15px"}} /></span></button>
+              <button onClick={deleteItem}>Delete &nbsp;<span><DeleteIcon style={{fontSize : "15px",}} /></span></button>
             </div>
             <hr />
           </div>
@@ -85,6 +88,9 @@ const CheckOut = () => {
           </div>
           <div className="subtotal-price">
             <h2>{subTotal}&#8377;</h2>
+            <Link to="/pay">
+              <button>Proceed To Pay</button>
+            </Link>
           </div>
         </div>
       )}

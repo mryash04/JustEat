@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/Header.css";
 import Logo from "../assets/justeat.jpeg";
@@ -19,6 +19,13 @@ const Head = () => {
   // const cartItem = useContext(CartItems);
   // console.log("This is header cart item", cartItem);
 
+  const[navLinkColor, setNavLinkColor] = useState("#ffffff");
+  console.log(navLinkColor);
+
+  const changeColor = () =>{
+    setNavLinkColor("#000000");
+  }
+
   return (
     <React.Fragment>
       <div className="head">
@@ -31,16 +38,16 @@ const Head = () => {
           />
         </Link>
         <div className="head_nav">
-          <Link to="/" className="head_link">
+          <Link to="/" className="head_link" style={{color : navLinkColor}} onClick={changeColor}>
             Home
           </Link>
-          <Link to="/aboutus" className="head_link">
+          <Link to="/aboutus" className="head_link" style={{color : navLinkColor}} onClick={changeColor}>
             About
           </Link>
-          <Link to="/plans" className="head_link">
+          <Link to="/plans" className="head_link"  style={{color : navLinkColor}} onClick={changeColor}>
             Recipe
           </Link>
-          <Link to="/plans" className="head_link">
+          <Link to="/plans" className="head_link"  style={{color : navLinkColor}} onClick={changeColor}>
             <AddShoppingCartIcon
               style={{ fontSize: "25px", marginTop: "5px" }}
             />
@@ -57,15 +64,14 @@ const Head = () => {
                   textAlign: "center",
                 }}
               >
-                {" "}
-                {cartItems}{" "}
+                {cartItems}
               </span>
             )}
           </Link>
-          <Link to="/signup" className="head_link">
+          <Link to="/signup" className="head_link"  style={{color : navLinkColor}} onClick={changeColor}>
             Signup
           </Link>
-          <Link to="/login" className="head_link">
+          <Link to="/login" className="head_link"  style={{color : navLinkColor}} onClick={changeColor}>
             Login
           </Link>
         </div>
