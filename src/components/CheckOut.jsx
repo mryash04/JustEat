@@ -15,23 +15,14 @@ const CheckOut = () => {
 
   const dispatch = useDispatch();
 
-  const deleteId = cartProduct.map((value) => value.id);
-  console.log(deleteId);
-
-  const id = deleteId.map(value => console.log(value))
-
-  const deleteItems = deleteId.filter(deleteItem => deleteItem);
-  console.log(deleteItems);
-
   const subTotal = cartProduct.reduce(
     (accumulator, current) => accumulator + current.price,
     0
   );
   console.log(subTotal);
 
-  const deleteItem = () =>{
-    console.warn(deleteItems);
-    dispatch(deleteFromCart(deleteId));
+  const deleteItem = (id) =>{
+    dispatch(deleteFromCart(id));
   }
 
   return (
@@ -43,6 +34,7 @@ const CheckOut = () => {
       </p>
       <h2>Food Cart</h2>
       {cartProduct.map((value) => {
+        console.log(value);
         return (
           <div className="checkout-product">
             <div className="checkout-product-details">
@@ -71,7 +63,7 @@ const CheckOut = () => {
               </div>
             </div>
             <div className="delete-btn">
-              <button onClick={deleteItem}>Delete &nbsp;<span><DeleteIcon style={{fontSize : "15px",}} /></span></button>
+              <button onClick={() => deleteItem(value.id)}>Delete &nbsp;<span><DeleteIcon style={{fontSize : "15px",}} /></span></button>
             </div>
             <hr />
           </div>

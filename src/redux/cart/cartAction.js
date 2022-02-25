@@ -14,7 +14,7 @@ const deleteFromCart = (id) =>{
     console.log(id);
     return{
         type : REMOVE_TO_CART,
-        id
+        payload : id
     }
 };
 

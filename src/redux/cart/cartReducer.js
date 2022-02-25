@@ -16,7 +16,7 @@ const cartReducer = (state=initialState, action) =>{
             ]
         }
         case REMOVE_TO_CART :
-            const newCartData = state.cartData.filter((cartItem) => cartItem.id !== action.id);
+            const newCartData = state.cartData.filter((cartItem) => cartItem.id !== action.payload);
             console.log(newCartData);
         return{
             cartData : newCartData

@@ -17,10 +17,16 @@ const OrderNowItems = ({id, image, foodName, price}) => {
   const [totalCartItem, setTotalCartItem] = useState(0);
   console.log(totalCartItem);
 
+  const [show, setShow] = useState(false);
+
   const addItemIntoCart = () => {
     // console.log("Clicked");
     // setTotalCartItem(totalCartItem + 1);
     dispatch(addToCart({id : id, image : image, foodName : foodName, price : price}));
+    setShow(true);
+    setTimeout(() => {
+      setShow(false);
+    }, 3000)
   };
 
   return (
@@ -44,7 +50,7 @@ const OrderNowItems = ({id, image, foodName, price}) => {
         </div>
         <div className="veg-burger-cart">
           <button className="veg-burger-cart-button" onClick={addItemIntoCart}>
-            ADD
+            {show ? "ADDED" : "ADD"}
             <ShoppingCartIcon className="Add-icon" />
           </button>
         </div>
